@@ -1,0 +1,8 @@
+
+
+# Test connectivity to VM instance
+sudo ip netns exec `ip netns | grep qrouter` /bin/bash
+ping <ip>
+
+# Get logs from Nova services (use -f to have live logs)
+sudo journalctl -u devstack@n-*.service
